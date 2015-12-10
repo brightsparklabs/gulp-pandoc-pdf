@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/brightsparklabs/gulp-pandoc-pdf/issues"
   },
-  "devDependencies": {
+  "dependencies": {
     "gulp-util": "^3.0.7",
     "mkdirp": "^0.5.1",
     "pdc": "^0.2.2",
