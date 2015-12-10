@@ -1,0 +1,29 @@
+{
+  "name": "gulp-pandoc-pdf",
+  "version": "0.0.0",
+  "description": "gulp plugin for generating PDFs via pandoc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brightsparklabs/gulp-pandoc-pdf.git"
+  },
+  "keywords": [
+    "gulp",
+    "pandoc",
+    "pdf"
+  ],
+  "author": "brightSPARK Labs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brightsparklabs/gulp-pandoc-pdf/issues"
+  },
+  "devDependencies": {
+    "gulp-util": "^3.0.7",
+    "mkdirp": "^0.5.1",
+    "pdc": "^0.2.2",
+    "through2": "^2.0.0"
+  }
+}
