@@ -58,9 +58,6 @@ placed. This is relative to `gulpfile.js`. E.g. `build/pdf`.
 Additional command line parameters to `pandoc`. 
 E.g. `['--smart', '--css=style.css']`.
 
-The following command line parameters are automatically passed to `pandoc`:
-`['--toc', '--number-sections']`.
-
 # Licenses
 
 Refer to the `LICENSE` file for details.
