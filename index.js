@@ -29,9 +29,6 @@ module.exports = function(opts) {
     var args = opts.args || [];
     var pdfDir = opts.pdfDir;
 
-    var mandatoryArgs = ['--toc', '--number-sections'];
-    args = args.concat(mandatoryArgs);
-
     return through.obj(function (file, enc, cb) {
         var input = file.contents.toString();
         if (file.isNull())  {
