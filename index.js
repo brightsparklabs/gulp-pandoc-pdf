@@ -61,7 +61,7 @@ module.exports = function(opts) {
                 this.emit('error', err.toString());
                 return cb();
             }
-        });
+        }.bind(this));
 
         // create pdf
         var pdfArgs = args.slice();
@@ -71,7 +71,7 @@ module.exports = function(opts) {
                 this.emit('error', new PluginError(pluginName, err.toString()));
                 return cb();
             }
-        });
+        }.bind(this));
 
         // create html
         var htmlArgs = args.slice();
