@@ -71,20 +71,20 @@ module.exports = function(opts) {
                 this.emit('error', new PluginError(pluginName, err.toString()));
                 return cb();
             }
-        }.bind(this));
 
-        // create html
-        var htmlArgs = args.slice();
-        htmlArgs.push('--standalone');
-        pdc(input, 'markdown', 'html5', htmlArgs, function(err, output) {
-            if (err) {
-                this.emit('error', new PluginError(pluginName, err.toString()));
+            // create html
+            var htmlArgs = args.slice();
+            htmlArgs.push('--standalone');
+            pdc(input, 'markdown', 'html5', htmlArgs, function(err, output) {
+                if (err) {
+                    this.emit('error', new PluginError(pluginName, err.toString()));
+                    return cb();
+                }
+                file.contents = new Buffer(output);
+                file.path = gutil.replaceExtension(file.path, '.html');
+                this.push(file);
                 return cb();
-            }
-            file.contents = new Buffer(output);
-            file.path = gutil.replaceExtension(file.path, '.html');
-            this.push(file);
-            return cb();
+            }.bind(this));
         }.bind(this));
     });
 };
